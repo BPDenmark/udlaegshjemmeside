@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udlægshjemmeside</title>
+</head>
+<body>
+
+    <h1>Velkommen til Udlægshjemmesiden</h1>
+    <p>Indsend dine udlæg nedenfor:</p>
+
+    <form id="udlaegsForm">
+        <label for="beloeb">Beløb:</label>
+        <input type="text" id="beloeb" name="beloeb" required>
+
+        <label for="beskrivelse">Beskrivelse:</label>
+        <textarea id="beskrivelse" name="beskrivelse" required></textarea>
+
+        <button type="submit">Send Udlæg</button>
+    </form>
+
+    <script>
+        document.getElementById('udlaegsForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Håndter formularindsendelse her (f.eks. send data til serveren).
+
+            // Redirect til tak-siden
+            window.location.href = 'tak.html';
+        });
+  
